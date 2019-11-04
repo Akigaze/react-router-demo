@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+
+# production
+/dist/bundle.js
+/coverage
+/example/**
+/readme-pic/**
+README.md
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/.idea

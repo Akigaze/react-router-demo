@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./style/app.css";
-import Example from "./demo/example";
+import RecursiveExample from "./demo/example";
 
 export default class App extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <div>
         <h1>Hello React Router!</h1>
-        <Example/>
+        <RecursiveExample/>
       </div>
     );
   }

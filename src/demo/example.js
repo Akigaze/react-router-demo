@@ -2,13 +2,14 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 const routes = [
-  { path: "/sandwiches", component: Sandwiches },
+  { path: "/sandwiches", component: Sandwiches, link: "Sandwiches" },
   {
     path: "/tacos",
     component: Tacos,
+    link: "Tacos",
     routes: [
-      { path: "/tacos/bus", component: Bus },
-      { path: "/tacos/cart", component: Cart }
+      { path: "/tacos/bus", component: Bus, link: "Bus" },
+      { path: "/tacos/cart", component: Cart, link: "Cart" }
     ]
   }
 ];
@@ -17,12 +18,13 @@ export default function RouteConfigExample() {
   return (
     <BrowserRouter>
       <ul>
-        <li>
-          <Link to="/tacos">Tacos</Link>
-        </li>
-        <li>
-          <Link to="/sandwiches">Sandwiches</Link>
-        </li>
+        {routes.map((route, index) => {
+          return (
+            <li key={index}>
+              <Link to={route.path}>{route.link}</Link>
+            </li>
+          );
+        })}
       </ul>
       <Switch>
         {routes.map((route, index) => {
@@ -34,7 +36,6 @@ export default function RouteConfigExample() {
 }
 
 function RouteWithSubRoute(route) {
-  console.log(route);
   return (
     <Route
       path={route.path}
@@ -52,12 +53,13 @@ function Tacos(props) {
     <div>
       <h2>Tacos</h2>
       <ul>
-        <li>
-          <Link to="/tacos/bus">Bus</Link>
-        </li>
-        <li>
-          <Link to="/tacos/cart">Cart</Link>
-        </li>
+        {props.routes.map((route, index) => {
+          return (
+            <li key={index}>
+              <Link to={route.path}>{route.link}</Link>
+            </li>
+          );
+        })}
       </ul>
       <div>
         {props.routes.map((route, index) => {

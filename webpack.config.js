@@ -29,7 +29,8 @@ const config = {
     devServer: {
         contentBase: "./dist",
         host: "localhost",
-        port: 8888
+        port: 8888,
+        historyApiFallback: true
     }
 };
 

@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest --config=jest.config.js",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server",
     "example.counter": "webpack-dev-server --open --config example/counter/webpack.config.example.counter.js",
     "example.todolist": "webpack-dev-server --open --config example/todo-list/webpack.config.example.todolist.js",
     "jest": "jest --config=jest.config.js --coverage",

@@ -30,7 +30,13 @@ const config = {
         contentBase: "./dist",
         host: "localhost",
         port: 8888,
-        historyApiFallback: true
+        historyApiFallback: {
+            rewrites: [
+                { from: /^\/hsl\/\d+\/\d+\/\d+/, to: "/index.html" },
+                { from: /^\/rgb\/\d+\/\d+\/\d+/, to: "/index.html" },
+                { from: /./, to: "/404.html" }
+            ]
+        }
     }
 };
 

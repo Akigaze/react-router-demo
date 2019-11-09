@@ -33,6 +33,7 @@
     "react-dom": "^16.11.0",
     "react-redux": "^6.0.0",
     "react-router-dom": "^5.1.2",
+    "react-transition-group": "^4.3.0",
     "redux": "^4.0.1"
   },
   "devDependencies": {

@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/Akigaze/react-dev-stack#readme",
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^6.0.0",
